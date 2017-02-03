@@ -14,7 +14,6 @@ import (
 	"github.com/idleuncle/yados/store/errors"
 	log "github.com/idleuncle/yados/utils/logger"
 	"github.com/labstack/echo"
-	"github.com/labstack/echo/engine/standard"
 )
 
 const (
@@ -82,9 +81,9 @@ func NewStackServer(ip string, port int, storeDir string) (ss *StackServer, err 
 		return
 	}
 
-	ss.mux.Get("/:bucket/*object", ss.downloadHandler)
-	ss.mux.Put("/:bucket/*object", ss.uploadHandler)
-	ss.mux.Delete("/:bucket/*object", ss.deleteHandler)
+	ss.mux.GET("/:bucket/*object", ss.downloadHandler)
+	ss.mux.PUT("/:bucket/*object", ss.uploadHandler)
+	ss.mux.DELETE("/:bucket/*object", ss.deleteHandler)
 
 	return
 }
@@ -104,7 +103,8 @@ func (_this *StackServer) Close() {
 // ======== StackServer.ListenAndServe() ========
 func (_this *StackServer) ListenAndServe() {
 	addr := _this.ip + ":" + strconv.Itoa(_this.port)
-	_this.mux.Run(standard.New(addr))
+	//_this.mux.Run(standard.New(addr))
+	_this.mux.Start(addr)
 }
 
 // ======== DownloadHandler() ========
