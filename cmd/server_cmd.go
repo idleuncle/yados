@@ -1,29 +1,3 @@
-/**
-# *　　　　 ┏┓　　 　┏┓+ +
-# *　　　　┏┛┻━━━━━━━┛┻━━┓　 + +
-# *　　　　┃　　　　　　 ┃
-# *　　　　┃━　　━　　 　┃ ++ + + +
-# *　　　 ████━████      ┃+
-# *　　　　┃　　　　　　 ┃ +
-# *　　　　┃　┻　　　    ┃
-# *　　　　┃　　　　　　 ┃ + +
-# *　　　　┗━━━┓　　 　┏━┛
-# *　　　　　　┃　　 　┃
-# *　　　　　　┃　　 　┃ + + + +
-# *　　　　　　┃　　 　┃　　　Code is far away from bug
-# *　　　　　　┃　　 　┃　　　with the animal protecting
-# *　　　　　　┃　　 　┃
-# *　　　　　　┃　　 　┃ + 　　　神兽保佑,代码无bug
-# *　　　　　　┃　　 　┃
-# *　　　　　　┃　　 　┃　　+
-# *　　　　　　┃　 　　┗━━━━━━━┓ + +
-# *　　　　　　┃ 　　　　　　　┣┓
-# *　　　　　　┃ 　　　　　　　┏┛
-# *　　　　　　┗━━┓┓┏━━━━━┳┓┏━━┛ + + + +
-# *　　　　　　　 ┃┫┫　   ┃┫┫
-# *　　　　　　　 ┗┻┛　   ┗┻┛+ + + +
-# */
-
 package cmd
 
 import (
@@ -33,7 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/ideluncle/yados/server"
+	"github.com/idleuncle/yados/server"
 	log "github.com/idleuncle/yados/utils/logger"
 	"github.com/spf13/cobra"
 )
